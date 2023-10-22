@@ -11,7 +11,7 @@ public class Fall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            
             StartCoroutine(ReloadSceneAfterDelay(deathDelay));
         }
 
@@ -20,6 +20,7 @@ public class Fall : MonoBehaviour
     private IEnumerator ReloadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
